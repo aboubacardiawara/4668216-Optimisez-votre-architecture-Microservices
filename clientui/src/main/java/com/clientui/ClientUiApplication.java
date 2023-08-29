@@ -9,18 +9,22 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.openfeign.support.SpringMvcContract;
 import org.springframework.context.annotation.Bean;
 
+import java.awt.*;
+
 @SpringBootApplication
 @EnableFeignClients("com.clientui")
 public class ClientUiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ClientUiApplication.class, args);
+		System.out.println("Microservice ClientUI running");
 
-	/*	Feign.builder()
+		/*
+		Feign.builder()
 				.contract(new SpringMvcContract())
 				.errorDecoder(new CustomErrorDecoder())
 				.target(MicroserviceProduitsProxy.class, "localhost:9001");
-				*/
+		*/
 	}
 
 
